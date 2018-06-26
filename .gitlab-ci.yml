@@ -1,0 +1,25 @@
+---
+image: $CI_REGISTRY/le-garff-yoann/docker-reveal-md:latest
+
+stages:
+  - build
+  - release
+  
+cache:
+  key: $CI_COMMIT_REF_SLUG
+  paths:
+    - dist/
+
+build:
+  stage: build
+  script: reveal-md index.md --static dist/
+
+release:
+  stage: release
+  script: test -f dist/index.html
+  artifacts:
+    paths:
+      - dist/
+  only:
+    - master
+    - tags
