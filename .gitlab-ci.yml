@@ -1,5 +1,7 @@
 ---
-image: $CI_REGISTRY/le-garff-yoann/docker-reveal-md:latest
+image:
+  name: $CI_REGISTRY/le-garff-yoann/docker-reveal-md:latest
+  entrypoint: [ "/bin/sh", "-c" ]
 
 stages:
   - build
