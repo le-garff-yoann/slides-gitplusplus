@@ -33,15 +33,6 @@ Notes:
 
 ----
 
-![](/images/git-intro.png)
-
-Notes: 
-* Your local repository consists of three "trees" maintained by git.
-* The first one is your Working Directory which holds the actual files.
-* The second one is the Index which acts as a staging area and finally the *HEAD* which points to the last commit you've made.
-
-----
-
 ### Quelques commandes
 
 ----
