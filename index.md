@@ -7,7 +7,7 @@ css: index.css
 
 ---
 
-La **gestion des sources** n'est pas toujours une pratique connue et répendue
+La **gestion des sources** n'est pas toujours une pratique répendue
 
 Notes:
 * Tracabilité des sources et historiques.
@@ -39,14 +39,15 @@ Notes:
 
 ```bash
 git help
+git help help
 ```
 
 ----
 
 ```bash
-git add <filename>
 git add .
-git add -i
+git add <filename>
+git add -p
 ```
 ```bash
 git commit -m "commit message"
@@ -59,6 +60,9 @@ Notes:
 * This is the first step in the basic git workflow.
 * To actually commit these changes use `git commit -m "commit message"`.
 * Now the file is committed to the *HEAD*, but not in your remote repository yet.
+* Your local repository consists of three "trees" maintained by git.
+* The first one is your Working Directory which holds the actual files.
+* The second one is the Index which acts as a staging area and finally the *HEAD* which points to the last commit you've made.
 
 ----
 
@@ -78,13 +82,9 @@ Notes:
 ----
 
 ```bash
-git checkout -b <feature>
-```
-```bash
+git checkout -b <branch>
 git checkout master
-```
-```bash
-git branch -d <feature>
+git branch -d <branch>
 ```
 ```bash
 git push origin <branch>
@@ -117,10 +117,8 @@ Notes:
 * In both cases git tries to auto-merge changes.
 * Unfortunately, this is not always possible and results in conflicts.
 * You are responsible to merge those conflicts manually by editing the files shown by git.
-* After changing, you need to mark them as merged with
-`git add <filename>`.
-* Before merging changes, you can also preview them by using
-`git diff <source_branch> <target_branch>`.
+* After changing, you need to mark them as merged with `git add <filename>`.
+* Before merging changes, you can also preview them by using `git diff <source_branch> <target_branch>`.
 
 ----
 
@@ -147,8 +145,8 @@ Notes:
 * You can add a lot of parameters to make the log look like what you want.
 * To see only the commits of a certain author: `git log --author=bob`.
 * To see a very compressed log where each commit is one line: `git log --pretty=oneline`.
-* Or maybe you want to see an ASCII art tree of all the branches, decorated with the names of tags and branches: `git log --graph --oneline --decorate --all`
-* See only which files have changed: `git log --name-status`
+* Or maybe you want to see an ASCII art tree of all the branches, decorated with the names of tags and branches: `git log --graph --oneline --decorate --all`.
+* See only which files have changed: `git log --name-status`.
 * These are just a few of the possible parameters you can use.
 * For more, see git `log --help`.
 
@@ -163,7 +161,7 @@ git reset --hard origin/master
 ```
 
 Notes:
-* In case you did something wrong, which for sure never happens ;), you can replace local changes using the command `git checkout -- <filename>`
+* In case you did something wrong, which for sure never happens, you can replace local changes using the command `git checkout -- <filename>`.
 * This replaces the changes in your working tree with the last content in *HEAD*.
 * Changes already added to the index, as well as new files, will be kept.
 
@@ -215,14 +213,15 @@ Un *remote* Git est souvent une usine logicielle
 6. Deploy
 
 Notes:
-* [mktemp.bash](https://gitlab.com/le-garff-yoann/mktemp.bash.git)
 * [slides-gitplusplus](https://gitlab.com/le-garff-yoann/slides-gitplusplus.git)
+* [mktemp.bash](https://gitlab.com/le-garff-yoann/mktemp.bash.git)
 
 ---
 
 ### Ressources
 
 * [Git community book](https://book.git-scm.com/)
+* [Git - petit guide](http://rogerdudler.github.io/git-guide/index.fr.html)
 * [GitHub Flow](https://guides.github.com/introduction/flow/)
 * [AngularJS git commit message conventions](https://gist.github.com/stephenparish/9941e89d80e2bc58a153)
 * [Semantic versionning](https://semver.org/)
@@ -232,4 +231,4 @@ Notes:
 * [DevOps](https://en.wikipedia.org/wiki/DevOps)
 
 Notes:
-* Merge request en attente de la part du complice : Ajout de `* [Le Code Civil sous GitHub](https://www.numerama.com/magazine/32646-le-code-civil-sous-github-pour-mieux-lire-ses-evolutions.html)` à la fin de cette présentation
+* Merge request en attente de la part du complice : Ajout de `* [Le Code Civil sous GitHub](https://www.numerama.com/magazine/32646-le-code-civil-sous-github-pour-mieux-lire-ses-evolutions.html)` à la fin de cette présentation.
