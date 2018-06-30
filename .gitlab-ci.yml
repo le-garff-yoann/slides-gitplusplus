@@ -7,10 +7,10 @@ stages:
   - build
   - release
   
-cache:
-  key: $CI_COMMIT_REF_SLUG
-  paths:
-    - public
+# cache:
+#   key: $CI_COMMIT_REF_SLUG
+#   paths:
+#     - public
 
 build:
   stage: build
@@ -18,7 +18,8 @@ build:
 
 pages:
   stage: release
-  script: test -f public/index.html
+  # script: test -f public/index.html
+  script: reveal-md index.md --static public # cache doesn't work well on gitlab.com... so we build it again
   artifacts:
     paths:
       - public
