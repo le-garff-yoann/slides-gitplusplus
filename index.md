@@ -1,27 +1,29 @@
 ---
-title: git++
+title: Git++
 theme: blood
 css: index.css
 ---
-# `git++`
 
----
-
-La **gestion des sources** n'est pas toujours une pratique répendue
-
-Notes:
-* Tracabilité des sources et historiques.
-* Usine logicielle.
-* Tests unitaires et tests d'intégrations.
-* Développement collaboratif inneficient.
+# Git++
 
 ----
 
-Mais ... je ne suis pas développeur !
+De la gestion de versions à CI/CD : des pratiques peu répendues, parfois inconnues
 
 Notes:
-* Les scripts, la configuration, la documentation et d'autres choses peuvent aussi être des sources.
-* Le Code Civil sous GitHub.
+* Inneficient collaborative development.
+* No traceability of sources and their history.
+* No unit tests and automated integration tests.
+* No CI/CD.
+* First steps towards DevOps culture.
+
+----
+
+Je ne suis pas développeur !
+
+Notes:
+* The scripts, configuration and documentation are also source code.
+* The Civil Code under Github.
 
 ---
 
@@ -29,11 +31,7 @@ Notes:
 
 ----
 
-### Gestion de versions décentralisé
-
-----
-
-### Quelques commandes
+Gestion de versions décentralisé
 
 ----
 
@@ -178,47 +176,62 @@ git config user.name le-garff-yoann
 git config user.email pe.weeble@yahoo.fr
 ```
 
-----
-
-Ok mais comment j'implémente ça au sein de mon équipe ?
-
 ---
 
-<a href="https://guides.github.com/introduction/flow/" data-preview-link><h2>GitHub Flow</h2></a>
+### Un remote. C'est quoi ?
+
+----
+
+Versions d'un repository qui est hébergée sur Internet ou le réseau
 
 Notes:
-* Montrer l'intérêt de ce type de workflow dans une organisation.
-* Et donc les *remotes* ?...
-
----
-
-On parle souvent de *remote* dans ces diapos. Kesako ?
+* 
+It is possible to have several remote configured for the same repository.
 
 ----
+
+Ces repository sont souvent hébergés sur des plateformes collaboratives voir des usines logicielles
 
 ![](/images/remote-logos.png)
 
-----
+---
 
-Un *remote* Git est souvent une usine logicielle
-
-![](/images/devops.png)
+### Pull request et workflows Git
 
 ----
 
-2. Code
-3. Build
-4. Test
-5. Release
-6. Deploy
+Les pull requests permettent de proposer des modifications sur un remote.
+
+Ces dernières sont généralement discutées, corrigées et testées avant d'être mergées.
+
+----
+
+Des plateformes, comme [GitHub](https://github.com/OpenNebula/one/pull/2167), proposent ce mécanisme</h2></a>
+
+----
+
+Certains workflows Git, comme [GitHub Flow](https://guides.github.com/introduction/flow/), s'appuient sur cette fonctionnalité
 
 Notes:
-* [slides-gitplusplus](https://gitlab.com/le-garff-yoann/slides-gitplusplus.git)
-* [mktemp.bash](https://gitlab.com/le-garff-yoann/mktemp.bash.git)
+* Do not forget to mention gitflow.
+
+---
+
+### CI/CD
+
+----
+
+![](/images/cd.png)
+
+----
+
+Un [exemple](https://gitlab.com/le-garff-yoann/slides-gitplusplus) vaut mieux qu'un long discours
 
 ---
 
 ### Ressources
+
+----
 
 * [Git community book](https://book.git-scm.com/)
 * [Git - petit guide](http://rogerdudler.github.io/git-guide/index.fr.html)
@@ -231,4 +244,4 @@ Notes:
 * [DevOps](https://en.wikipedia.org/wiki/DevOps)
 
 Notes:
-* Merge request en attente de la part du complice : Ajout de `* [Le Code Civil sous GitHub](https://www.numerama.com/magazine/32646-le-code-civil-sous-github-pour-mieux-lire-ses-evolutions.html)` à la fin de cette présentation.
+* Pull request in the pipe : Add `* [Le Code Civil sous GitHub](https://www.numerama.com/magazine/32646-le-code-civil-sous-github-pour-mieux-lire-ses-evolutions.html)` to this presentation.
