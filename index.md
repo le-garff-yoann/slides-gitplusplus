@@ -2,6 +2,7 @@
 title: Git++
 theme: blood
 css: index.css
+template: index.html
 ---
 
 # Git++
@@ -200,9 +201,9 @@ Ces repository sont souvent hébergés sur des plateformes collaboratives voir d
 
 ----
 
-Les pull requests permettent de proposer des modifications sur un remote.
+Les pull requests permettent de proposer des modifications sur un remote
 
-Ces dernières sont généralement discutées, corrigées et testées avant d'être mergées.
+Ces dernières sont généralement discutées, corrigées et testées avant d'être mergées
 
 ----
 
@@ -225,7 +226,10 @@ Notes:
 
 ----
 
-Un [exemple](https://gitlab.com/le-garff-yoann/slides-gitplusplus) vaut mieux qu'un long discours
+Un exemple vaut mieux qu'un long discours
+
+Notes:
+* Use the "Fork me" ribbons.
 
 ---
 
