@@ -14,12 +14,12 @@ stages:
 
 build:
   stage: build
-  script: reveal-md index.md --static public
+  script: reveal-md index.md --template index.html --css index.css --static public
 
 pages:
   stage: release
   # script: test -f public/index.html
-  script: reveal-md index.md --static public # cache doesn't work well on gitlab.com... so we build it again
+  script: reveal-md index.md --template index.html --css index.css --static public # cache doesn't work well on gitlab.com... so we build it again
   artifacts:
     paths:
       - public
