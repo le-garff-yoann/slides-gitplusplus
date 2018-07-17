@@ -222,7 +222,17 @@ Notes:
 
 ----
 
-![](/images/cd.png)
+* **Continuous Integration/CI**
+  * Code
+  * Build
+* **Continuous Delivery/CD**
+  * Integrate
+  * Release
+
+----
+
+* **Continuous Deployment**
+  * Deploy
 
 ----
 
