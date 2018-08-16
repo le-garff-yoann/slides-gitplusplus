@@ -270,6 +270,4 @@ Notes:
 * [Documentation GitLab](https://docs.gitlab.com/)
 * [CI/CD](https://en.wikipedia.org/wiki/CI/CD)
 * [DevOps](https://en.wikipedia.org/wiki/DevOps)
-
-Notes:
-* Pull request in the pipe : Add `* [Le Code Civil sous GitHub](https://www.numerama.com/magazine/32646-le-code-civil-sous-github-pour-mieux-lire-ses-evolutions.html)` to this presentation.
+* [Le Code Civil sous GitHub](https://www.numerama.com/magazine/32646-le-code-civil-sous-github-pour-mieux-lire-ses-evolutions.html)
