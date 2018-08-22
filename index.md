@@ -208,7 +208,7 @@ It is possible to have several remote configured for the same repository.
 
 ----
 
-Ces repository sont souvent hébergés sur des plateformes collaboratives voir des usines logicielles
+Ces repository sont souvent hébergés sur des plateformes collaboratives voir des usines logicielles (GitLab, suite Atlassian, ...)
 
 ![](/images/remote-logos.png)
 
