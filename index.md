@@ -9,7 +9,7 @@ template: index.html
 
 ----
 
-De la gestion de versions à CI/CD : des pratiques peu répendues, parfois inconnues
+De la gestion de versions au CI(Continuous Integration)/CD(Continuous Delivery) : des pratiques peu répendues, parfois inconnues
 
 Notes:
 * Inneficient collaborative development.
@@ -54,7 +54,7 @@ git init .
 ```bash
 git add .
 git add <filename>
-git add -p
+git add -p # chunk by chunk
 ```
 ```bash
 git status
@@ -73,6 +73,23 @@ Notes:
 * Your local repository consists of three "trees" maintained by git.
 * The first one is your Working Directory which holds the actual files.
 * The second one is the Index which acts as a staging area and finally the *HEAD* which points to the last commit you've made.
+
+----
+
+```bash
+git log
+git log --author=bob
+```
+
+Notes:
+* In its simplest form, you can study repository history using `git log`.
+* You can add a lot of parameters to make the log look like what you want.
+* To see only the commits of a certain author: `git log --author=bob`.
+* To see a very compressed log where each commit is one line: `git log --pretty=oneline`.
+* Or maybe you want to see an ASCII art tree of all the branches, decorated with the names of tags and branches: `git log --graph --oneline --decorate --all`.
+* See only which files have changed: `git log --name-status`.
+* These are just a few of the possible parameters you can use.
+* For more, see git `log --help`.
 
 ----
 
@@ -110,13 +127,14 @@ Notes:
 
 ```bash
 git pull
+git pull origin <branch>
 ```
 ```bash
 git merge <branch>
 ```
 ```bash
-git rebase -i 1b2e1d63ff
-git rebase <branch>
+git rebase -i <commit>
+git rebase <source-branch> # <target-branch>
 ```
 
 ![](/images/git-branches.png)
@@ -134,7 +152,7 @@ Notes:
 
 ```bash
 git tag 1.0.0
-git tag 0.9.0 1b2e1d63ff
+git tag 0.9.0 <commit>
 ```
 
 Notes:
@@ -146,28 +164,7 @@ Notes:
 ----
 
 ```bash
-git log
-git log --author=le-garff-yoann
-```
-
-Notes:
-* In its simplest form, you can study repository history using `git log`.
-* You can add a lot of parameters to make the log look like what you want.
-* To see only the commits of a certain author: `git log --author=bob`.
-* To see a very compressed log where each commit is one line: `git log --pretty=oneline`.
-* Or maybe you want to see an ASCII art tree of all the branches, decorated with the names of tags and branches: `git log --graph --oneline --decorate --all`.
-* See only which files have changed: `git log --name-status`.
-* These are just a few of the possible parameters you can use.
-* For more, see git `log --help`.
-
-----
-
-```bash
 git checkout -- <filename>
-```
-```bash
-git fetch origin
-git reset --hard origin/master
 ```
 
 Notes:
@@ -177,15 +174,14 @@ Notes:
 
 * If you instead want to drop all your local changes and commits, fetch the latest history from the server and point your local *master* branch at it like this:
 ```bash
-git fetch origin
-git reset --hard origin/master
+git fetch origin && git reset --hard origin/master
 ```
 
 ----
 
 ```bash
-git config user.name le-garff-yoann
-git config user.email pe.weeble@yahoo.fr
+git config user.name bob
+git config user.email bob@gmail.com
 ```
 
 ----
@@ -196,7 +192,7 @@ git clone https://github.com/torvalds/linux.git
 
 ---
 
-### Un remote. C'est quoi ?
+### Un remote. C'est quoi exactement ?
 
 ----
 
@@ -208,7 +204,7 @@ It is possible to have several remote configured for the same repository.
 
 ----
 
-Ces repository sont souvent hébergés sur des plateformes collaboratives voir des usines logicielles (GitLab, suite Atlassian, ...)
+Ces repository sont souvent hébergés sur des plateformes collaboratives voir des usines logicielles comme GitLab ou la suite Atlassian
 
 ![](/images/remote-logos.png)
 
@@ -235,28 +231,29 @@ Notes:
 
 ---
 
-### CI/CD
+### CI(Continuous Integration)/CD(Continuous Deployment)
 
 ----
 
-* **Continuous Integration/CI**
+* **CI(Continuous Integration)**
   * Code
   * Build
-* **Continuous Delivery/CD**
+* **CD(Continuous Delivery)**
   * Integrate
   * Release
 
 ----
 
-* **Continuous Deployment**
+* **CD se traduit aussi en "Continuous Deployment"**
   * Deploy
 
 ----
 
-Un exemple vaut mieux qu'un long discours
+Des exemples valent mieux qu'un long discours
 
 Notes:
 * Use the "Fork me" ribbons.
+* https://gitlab.com/le-garff-yoann/packer-centos7
 
 ---
 
