@@ -44,9 +44,20 @@ git help help
 ----
 
 ```bash
+mkdir my-project/ && cd my-project/
+
+git init .
+```
+
+----
+
+```bash
 git add .
 git add <filename>
 git add -p
+```
+```bash
+git status
 ```
 ```bash
 git commit -m "commit message"
@@ -175,6 +186,12 @@ git reset --hard origin/master
 ```bash
 git config user.name le-garff-yoann
 git config user.email pe.weeble@yahoo.fr
+```
+
+----
+
+```bash
+git clone https://github.com/torvalds/linux.git
 ```
 
 ---
