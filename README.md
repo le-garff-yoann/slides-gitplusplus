@@ -1,6 +1,6 @@
 # slides-gitplusplus
 
-![Build Status](https://gitlab.com/le-garff-yoann/slides-gitplusplus/badges/master/build.svg)
+[![pipeline status](https://gitlab.com/le-garff-yoann/slides-gitplusplus/badges/master/pipeline.svg)](https://gitlab.com/le-garff-yoann/slides-gitplusplus/pipelines)
 
 From Git to CI/CD with GitLab.
 
