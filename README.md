@@ -1,4 +1,4 @@
-# slides-gitplusplus
+# [slides-git++](https://le-garff-yoann.gitlab.io/slides-gitplusplus)
 
 [![pipeline status](https://gitlab.com/le-garff-yoann/slides-gitplusplus/badges/master/pipeline.svg)](https://gitlab.com/le-garff-yoann/slides-gitplusplus/pipelines)
 
